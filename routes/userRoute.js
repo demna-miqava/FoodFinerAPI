@@ -1,13 +1,19 @@
 import express from "express";
+import {
+  getUserInfo,
+  login,
+  refreshToken,
+  register,
+} from "../controllers/user.js";
 
 const router = express.Router();
 
-router.get("/:id", () => {});
+router.get("/:id", getUserInfo);
 
-router.post("/refresh", () => {});
+router.post("/refresh", refreshToken);
 
-router.post("/register", () => {});
+router.post("/register", register);
 
-router.post("/login", () => {});
+router.post("/login", login);
 
 export default router;

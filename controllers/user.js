@@ -30,7 +30,7 @@ export const register = async (req, res) => {
     const { _id, firstName, lastName, role } = newUser;
     const { token, refreshToken } = generateToken(
       { _id, firstName, lastName, role },
-      "15m",
+      "15am",
       "7d"
     );
     return res.status(200).json({
